@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+
+    <style is="custom-style">
+        .card-preview-container {
+            margin: 4px;
+        }
+
+        img.card-preview {
+            height: 418px;
+            width: 300px;
+        }
+
+
+        .algolia-autocomplete {
+            width: 100%;
+        }
+        .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+            width: 100%;
+        }
+        .algolia-autocomplete .aa-hint {
+            color: #999;
+        }
+        .algolia-autocomplete .aa-dropdown-menu {
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #999;
+            border-top: none;
+        }
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+            cursor: pointer;
+            padding: 5px 4px;
+        }
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+            background-color: #B2D7FF;
+        }
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+
+    <form onsubmit="return false;">
+        <div class="field has-addons">
+            <div class="control is-expanded">
+                <input class="input" id="cardQuery" type="text" placeholder="Card Name" />
+                <div id="cardQueryAutocomplete"></div>
+            </div>
+            <div class="control">
+                <button class="button">
+                    <span class="icon is-primary is-small" id="search">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="card-preview-container has-text-centered">
+            <img class="card-preview" id="cardPreview" src="no-card.png" />
+        </div>
+
+    </form>
+
+    <script src="../node_modules/autocomplete.js/dist/autocomplete.js"></script>
+    <script src="card-search.js"></script>
+
+</body>
+</html>

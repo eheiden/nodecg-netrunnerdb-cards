@@ -1,0 +1,49 @@
+{
+  "name": "nodecg-netrunnerdb-cards",
+  "version": "0.0.0",
+  "description": "NodeCG bundle for displaying Netrunner card pop-in overlays from NetrunnerDB",
+  "homepage": "",
+  "author": {
+    "name": "Ben Torell",
+    "email": "dodgepong@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "netrunner",
+    "cards",
+    "overlay",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "~0.9.9",
+    "dashboardPanels": [
+      {
+        "name": "card-overlay",
+        "title": "Card Search",
+        "width": 3,
+        "file": "card-search.html",
+        "headerColor": "#9f9bbd"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "MIT",
+  "dependencies": {
+    "autocomplete.js": "^0.30.0",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1"
+  }
+}
