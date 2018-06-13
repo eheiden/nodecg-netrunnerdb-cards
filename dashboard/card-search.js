@@ -105,9 +105,9 @@
     });
 
     b_showLeft.addEventListener('click', () => {
-        console.log('clik');
         setLeft();
-        nodecg.sendMessage('showLeft');
+        // small delay to make sure card gets updated
+        window.setTimeout(() => nodecg.sendMessage('showLeft'), 500);
     });
 
     b_hideLeft.addEventListener('click', () => {
@@ -116,12 +116,14 @@
 
     b_showLeft10s.addEventListener('click', () => {
         setLeft();
-        nodecg.sendMessage('showLeft10s');
+        // small delay to make sure card gets updated
+        window.setTimeout(() => nodecg.sendMessage('showLeft10s'), 500);
     });
 
     b_showRight.addEventListener('click', () => {
         setRight();
-        nodecg.sendMessage('showRight');
+        // small delay to make sure card gets updated
+        window.setTimeout(() => nodecg.sendMessage('showRight'), 500);
     });
 
     b_hideRight.addEventListener('click', () => {
@@ -130,7 +132,8 @@
 
     b_showRight10s.addEventListener('click', () => {
         setRight();
-        nodecg.sendMessage('showRight10s');
+        // small delay to make sure card gets updated
+        window.setTimeout(() => nodecg.sendMessage('showRight10s'), 500);
     });
 
     autocomplete('#cardQuery', { hint: false, autoselect: true, appendTo: '#cardQueryAutocomplete' }, [
