@@ -33,9 +33,15 @@
     ],
     "graphics": [
       {
-        "file": "index.html",
+        "file": "card-display.html",
         "width": 1920,
         "height": 1080
+      }
+    ],
+    "mount": [
+      {
+        "directory": "netrunnercards",
+        "endpoint": "netrunnercards"
       }
     ]
   },
@@ -44,6 +50,8 @@
   "dependencies": {
     "autocomplete.js": "^0.30.0",
     "axios": "^0.18.0",
-    "bulma": "^0.7.1"
+    "bulma": "^0.7.1",
+    "gsap": "^2.0.1",
+    "npm": "^6.1.0"
   }
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #leftCardContainer {
+            position: absolute;
+            top: 50px;
+            left: -50px;
+        }
+
+        #rightCardContainer {
+            position: absolute;
+            top: 50px;
+            left: 1640px;
+        }
+
+        .card-container {
+            perspective: 800px;
+        }
+
+        .card {
+            height: 418px;
+            width: 300px;
+        }
+
+        #leftCard {
+            padding-left: 30px;
+            transform-origin: center left;
+            transform: rotateY(115deg);
+            display: none;
+        }
+
+        #rightCard {
+            padding-right: 30px;
+            transform-origin: center right;
+            transform: rotateY(-115deg);
+            display: none;
+        }
+    </style>
+
+    <div id="leftCardContainer" class="card-container">
+        <img src="" id="leftCard" class="card" />
+    </div>
+    <div id="rightCardContainer" class="card-container">
+        <img src="" id="rightCard" class="card" />
+    </div>
+
+    <script src="../node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="card-display.js"></script>
+</body>
+</html>
