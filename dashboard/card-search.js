@@ -13,10 +13,14 @@
     const b_showRight = document.getElementById('showRight');
     const b_hideRight = document.getElementById('hideRight');
     const b_showRight10s = document.getElementById('showRight10s');
+
+    const b_showSolo = document.getElementById('showSolo');
+    const b_hideSolo = document.getElementById('hideSolo');
     const b_refreshDatabase = document.getElementById('refreshDatabase');
 
     const r_leftCard = nodecg.Replicant('leftCard');
     const r_rightCard = nodecg.Replicant('rightCard');
+    const r_soloCard = nodecg.Replicant('soloCard');
 
     function searchCards(query, cb) {
         const nrdbCards = r_cards.value;
@@ -44,13 +48,12 @@
             return
         }
 
-        if (i_cardPreview.src == 'no-card.png' || i_cardPreview.src === "") {
+        if (i_cardPreview.src == '../shared/runner-back.png' || i_cardPreview.src === "") {
             currentLeftCard.img = "";
         }
         else {
             currentLeftCard.img = i_cardPreview.src;
         }
-        r_leftCard.value = currentLeftCard;
     }
 
     function setRight() {
@@ -59,13 +62,26 @@
             return
         }
 
-        if (i_cardPreview.src == 'no-card.png' || i_cardPreview.src === "") {
+        if (i_cardPreview.src == '../shared/runner-back.png' || i_cardPreview.src === "") {
             currentRightCard.img = "";
         }
         else {
             currentRightCard.img = i_cardPreview.src;
         }
-        r_rightCard.value = currentRightCard;
+    }
+
+    function setSolo() {
+        var currentSoloCard = r_soloCard.value;
+        if (i_cardPreview.src === currentSoloCard.img) {
+            return
+        }
+
+        if (i_cardPreview.src == '../shared/runner-back.png' || i_cardPreview.src === "") {
+            currentSoloCard.img = "";
+        }
+        else {
+            currentSoloCard.img = i_cardPreview.src;
+        }
     }
 
     i_cardQuery.addEventListener('keyup', (event) => {
@@ -77,11 +93,18 @@
     b_search.addEventListener('click', () => {
         const result = getCard(i_cardQuery.value);
         if (!result) {
-            i_cardPreview.src = "no-card.png";
+            i_cardPreview.src = "../shared/runner-back.png";
         } else {
-            const nrdbCards = r_cards.value;
             i_cardPreview.src = "../shared/netrunnercards/" + result['code'] + ".png";
         }
+    });
+
+    b_showSolo.addEventListener('click', () => {
+        setSolo();
+    });
+
+    b_hideSolo.addEventListener('click', () => {
+        r_soloCard.value.img = "";
     });
 
     b_refreshDatabase.addEventListener('click', () => {

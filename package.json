@@ -36,6 +36,11 @@
         "file": "card-display.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "solo-card.html",
+        "width": 300,
+        "height": 418
       }
     ],
     "mount": [
