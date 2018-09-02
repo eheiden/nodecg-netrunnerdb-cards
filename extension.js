@@ -2,6 +2,10 @@
 
 module.exports = function (nodecg) {
     const axios = require('axios');
+    const fs = require('fs');
+    const path = require('path');
+
+    const filePath = path.join(__dirname, 'shared/cards.json');
 
     const leftInitialValue = {
         img: ""
@@ -18,8 +22,11 @@ module.exports = function (nodecg) {
     const r_rightCard = nodecg.Replicant('rightCard', { defaultValue: rightInitialValue });
     const r_soloCard = nodecg.Replicant('soloCard', { defaultValue: soloInitialValue });
 
-    axios.get('https://netrunnerdb.com/api/2.0/public/cards')
-        .then(response => nodecg.Replicant('cards').value = response.data);
-
-
+    fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+        if (!err) {
+            const cards = nodecg.Replicant('cards').value = JSON.parse(data);
+        } else {
+            console.log(err);
+        }
+    });
 };
