@@ -1,5 +1,5 @@
 netrunner-card-overlay is a [NodeCG](http://github.com/nodecg/nodecg) bundle.
-It was originally written by dodgepong (https://github.com/dodgepong/nodecg-netrunnerdb-cards), and this version of the repo has been forked by Eric Heiden. The blame for any bugs belongs to Eric.
+It was originally written by [dodgepong](https://github.com/dodgepong/nodecg-netrunnerdb-cards), and this version of the repo has been forked by Eric Heiden. The blame for any bugs belongs to Eric.
 
 It works with NodeCG versions which satisfy this [semver](https://docs.npmjs.com/getting-started/semantic-versioning) range: `~2.1.1`
 You will need to have an appropriate version of NodeCG installed to use it.
@@ -24,4 +24,4 @@ In order to easily obtain the images for all the cards correctly, navigate to no
 Tested using Node.js v18.15.0 on 4/19/2023
 
 API References:
-https://netrunnerdb.com/api/doc
+[Netrunnerdb.com API](https://netrunnerdb.com/api/doc)
