@@ -95,7 +95,7 @@
         if (!result) {
             i_cardPreview.src = "../shared/runner-back.png";
         } else {
-            i_cardPreview.src = "../shared/netrunnercards/" + result['code'] + ".png";
+            i_cardPreview.src = "../shared/netrunnercards/" + result['code'] + ".jpg";
         }
     });
 

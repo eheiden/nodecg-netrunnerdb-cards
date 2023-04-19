@@ -14,23 +14,27 @@
     var rightTimeout;
 
     function aShowLeft() {
-        TweenMax.to("#leftCard", 1, {rotationY: 15});
-        TweenMax.to("#leftCardContainer", 1, {left: 0});
+        // TweenMax.to("#leftCard", 1, {rotationY: 15, ease: Power1.easeIn});
+        TweenMax.to("#leftCard", 0.75, {ease: Back.easeOut});
+        TweenMax.to("#leftCardContainer", 0.75, {left: 0, ease: Back.easeOut});
     }
 
     function aHideLeft() {
-        TweenMax.to("#leftCard", 0.5, {rotationY: 115, ease: Power1.easeIn});
-        TweenMax.to("#leftCardContainer", 0.5, {left: -50, ease: Power1.easeIn});
+        // TweenMax.to("#leftCard", 0.5, {rotationY: 115, ease: Power1.easeIn});
+        TweenMax.to("#leftCard", 1.0, {ease: Back.easeIn});
+        TweenMax.to("#leftCardContainer", 1.0, {left: -450, ease: Back.easeIn});
     }
 
     function aShowRight() {
-        TweenMax.to("#rightCard", 1, {rotationY: -15});
-        TweenMax.to("#rightCardContainer", 1, {left: 1590});
+        // TweenMax.to("#rightCard", 1, {rotationY: -15, ease: Power1.easeIn});
+        TweenMax.to("#rightCard", .75, {ease: Back.easeOut});
+        TweenMax.to("#rightCardContainer", .75, {left: 1490, ease: Back.easeOut});
     }
 
     function aHideRight() {
-        TweenMax.to("#rightCard", 0.5, {rotationY: -115, ease: Power1.easeIn});
-        TweenMax.to("#rightCardContainer", 0.5, {left: 1640, ease: Power1.easeIn});
+        // TweenMax.to("#rightCard", 0.5, {rotationY: -115, ease: Power1.easeIn});
+        TweenMax.to("#rightCard", 1.0, {ease: Back.easeIn});
+        TweenMax.to("#rightCardContainer", 1.0, {left: 1940, ease: Back.easeIn});
     }
 
     r_leftCard.on('change', newCard => {

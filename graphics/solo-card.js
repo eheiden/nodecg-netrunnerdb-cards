@@ -23,7 +23,7 @@
     r_soloCard.on('change', newCard => {
         fadeOut();
         if (newCard.img !== null && newCard.img !== "") {
-            window.setTimeout(updateCard, fadeDelay * 1000);
+            window.setTimeout(updateCard, fadeDelay * 2000);
         }
 
     });

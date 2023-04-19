@@ -21,7 +21,7 @@
     "nodecg-bundle"
   ],
   "nodecg": {
-    "compatibleRange": "~0.9.9",
+    "compatibleRange": "~2.1.1",
     "dashboardPanels": [
       {
         "name": "card-overlay",
@@ -39,8 +39,8 @@
       },
       {
         "file": "solo-card.html",
-        "width": 300,
-        "height": 418
+        "width": 400,
+        "height": 577
       }
     ],
     "mount": [
