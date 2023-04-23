@@ -26,14 +26,22 @@
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
 
-        const matches = cardsData.filter(card => card.title.match(new RegExp(query, "i")))
+        const matches = cardsData.filter(card => card.stripped_title.match(new RegExp(query, "i")))
+        
+        //for debug, watch the console in the browser (in chrome right click the dashboard, click inspect, then find the "Console" tab)
+        // for (let i = 0; i < matches.length; i++){
+        //     console.log(`"${query}" matched "${matches[i].stripped_title}"`);
+        // }
+        
         cb(matches);
     }
 
     function getCard(title) {
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
-        const matches = cardsData.filter(card => card.title.match(new RegExp("^" + title + "$", "i")))
+
+        //look in extension.js for how the cards.json file gets parsed into the card object
+        const matches = cardsData.filter(card => card.stripped_title.match(new RegExp("^" + title + "$", "i")))
 
         if (matches.length > 0) {
             return matches[matches.length - 1];
