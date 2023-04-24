@@ -22,6 +22,7 @@
     const r_rightCard = nodecg.Replicant('rightCard');
     const r_soloCard = nodecg.Replicant('soloCard');
 
+    //searchCards is called whenever a new character is typed, and it passes back any matches from the database through a callback object cb
     function searchCards(query, cb) {
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
@@ -36,12 +37,14 @@
         cb(matches);
     }
 
-    function getCard(title) {
+    //getCard is called whenever enter is hit on the Card Search textbox or the magnifying glass is clicked, and returns any matches
+    //"searchTerm" is whatever text is in the search box
+    function getCard(searchTerm) {
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
 
         //look in extension.js for how the cards.json file gets parsed into the card object
-        const matches = cardsData.filter(card => card.stripped_title.match(new RegExp("^" + title + "$", "i")))
+        let matches = cardsData.filter(card => card.title.match(new RegExp("^" + searchTerm + "$", "i")))
 
         if (matches.length > 0) {
             return matches[matches.length - 1];
