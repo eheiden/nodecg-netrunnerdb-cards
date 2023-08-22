@@ -1,0 +1,22 @@
+1) Steps 1 and 2 from here: https://blog.risingstack.com/node-js-windows-10-tutorial/
+ (Install git, install node.js)
+2) clone nodecg: https://github.com/nodecg/nodecg
+
+install commands for the download.sh script:
+`npm install -g json`
+
+move the cards into the folder "netrunnercards"
+
+install wget -> install https://chocolatey.org/install
+open an admin windows powershell & run 'choco install jq'
+
+3) cd to nodecg/bundles and clone nodecg-netrunnerdb-cards: https://github.com/eheiden/nodecg-netrunnerdb-cards
+4a) cd to /nodecg base directory and 'npm install' & 'npm run build'
+4) cd to /nodecg-nerunnerdb-cards and update dependencies: npm install
+5) cd to shared and run download.sh to download card images: ./download.sh (note: this takes a long time - like an hour or two)
+6) cd to /nodecg and run 'nodecg start'
+7) open a browser, navigate to http://localhost:9090/dashboard/#
+8) In OBS add a new Browser source, and add http://localhost:9090/bundles/nodecg-netrunnerdb-cards/graphics/card-display.html as the url, set width: 1920, Height: 1080 (for a 1080p stream/video), set "Use custom frame rate" and FPS:60
+Under Custom CC add:
+"body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }"
+

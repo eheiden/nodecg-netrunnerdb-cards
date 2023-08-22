@@ -1,6 +1,7 @@
 (function () {
     'use strict';
 
+    //Replicants are reated in extension.js within the nodecg-netrunnerdb-cards directory
     const r_cards = nodecg.Replicant('cards');
 
     const b_search = document.getElementById('search');
@@ -27,26 +28,59 @@
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
 
-        const matches = cardsData.filter(card => card.stripped_title.match(new RegExp(query, "i")))
+        //const matches = cardsData.filter(card => card.attributes.stripped_title.match(new RegExp(query, "i")))
         
+        let matches = cardsData.filter(card => {
+            let attr = card.attributes;
+            let stripped = attr.stripped_title;
+            //console.log("trying to query '" + query + "' with stripped title '" + stripped + "'.");
+            let match = stripped.includes(query);
+            //console.log("'stripped.includes(query)' returned '" + match + "'");
+            return match;
+            })
+
         //for debug, watch the console in the browser (in chrome right click the dashboard, click inspect, then find the "Console" tab)
-        // for (let i = 0; i < matches.length; i++){
-        //     console.log(`"${query}" matched "${matches[i].stripped_title}"`);
-        // }
+        for (let i = 0; i < matches.length; i++){
+            console.log(`"searchCards() "${query}" returned "${matches[i].attributes.stripped_title}"`);
+        }
         
         cb(matches);
     }
 
     //getCard is called whenever enter is hit on the Card Search textbox or the magnifying glass is clicked, and returns any matches
-    //"searchTerm" is whatever text is in the search box
-    function getCard(searchTerm) {
+    //"query" is whatever text is in the search box
+    function getCard(query) {
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
 
+        //for (let i = 0; i < cardsData.length; i++){
+        //    console.log(cardsData[i].attributes.stripped_title)
+        //}
+
         //look in extension.js for how the cards.json file gets parsed into the card object
-        let matches = cardsData.filter(card => card.title.match(new RegExp("^" + searchTerm + "$", "i")))
+        //const matches = cardsData.filter(card => card.attributes.stripped_title.match(new RegExp(query, "i")))
+        //let matches = cardsData.filter(card => card.attributes.stripped_title.match(new RegExp("^" + query + "$", "i")))
+
+        let matches = cardsData.filter(card => {
+            let attr = card.attributes;
+            let stripped = attr.stripped_title;
+            //console.log("trying to query '" + query + "' with stripped title '" + stripped + "'.");
+            let match = stripped.includes(query);
+            //console.log("'stripped.includes(query)' returned '" + match + "'");
+
+            return match;
+            })
+
+        //console.log(`getCard() length of matches = "${matches.length}"`);
+
+        // for (let i = 0; i < matches.length; i++){
+        //     console.log(`"${query}" returned "${matches[i].attributes.stripped_title}"`);
+        // }
 
         if (matches.length > 0) {
+
+            console.log(matches[matches.length - 1]);
+
             return matches[matches.length - 1];
         } else {
             return false;
@@ -106,7 +140,7 @@
         if (!result) {
             i_cardPreview.src = "../shared/runner-back.png";
         } else {
-            i_cardPreview.src = "../shared/netrunnercards/" + result['code'] + ".jpg";
+            i_cardPreview.src = "../shared/netrunnercards/" + result['id'] + ".jpg";
         }
     });
 
