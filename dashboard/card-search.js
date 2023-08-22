@@ -27,12 +27,13 @@
     function searchCards(query, cb) {
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
-
-        //const matches = cardsData.filter(card => card.attributes.stripped_title.match(new RegExp(query, "i")))
+        
+        //.includes() is case sensitive, convert everything to lowercase
+        query = query.toLowerCase();
         
         let matches = cardsData.filter(card => {
             let attr = card.attributes;
-            let stripped = attr.stripped_title;
+            let stripped = attr.stripped_title.toLowerCase();
             //console.log("trying to query '" + query + "' with stripped title '" + stripped + "'.");
             let match = stripped.includes(query);
             //console.log("'stripped.includes(query)' returned '" + match + "'");
@@ -40,9 +41,9 @@
             })
 
         //for debug, watch the console in the browser (in chrome right click the dashboard, click inspect, then find the "Console" tab)
-        for (let i = 0; i < matches.length; i++){
-            console.log(`"searchCards() "${query}" returned "${matches[i].attributes.stripped_title}"`);
-        }
+        //for (let i = 0; i < matches.length; i++){
+        //    console.log(`"searchCards() "${query}" returned "${matches[i].attributes.stripped_title}"`);
+        //}
         
         cb(matches);
     }
@@ -53,17 +54,18 @@
         const nrdbCards = r_cards.value;
         const cardsData = nrdbCards['data'];
 
+        //.includes() is case sensitive, convert everything to lowercase
+        query = query.toLowerCase();
+
+        //debug
         //for (let i = 0; i < cardsData.length; i++){
         //    console.log(cardsData[i].attributes.stripped_title)
         //}
 
         //look in extension.js for how the cards.json file gets parsed into the card object
-        //const matches = cardsData.filter(card => card.attributes.stripped_title.match(new RegExp(query, "i")))
-        //let matches = cardsData.filter(card => card.attributes.stripped_title.match(new RegExp("^" + query + "$", "i")))
-
         let matches = cardsData.filter(card => {
             let attr = card.attributes;
-            let stripped = attr.stripped_title;
+            let stripped = attr.stripped_title.toLowerCase();
             //console.log("trying to query '" + query + "' with stripped title '" + stripped + "'.");
             let match = stripped.includes(query);
             //console.log("'stripped.includes(query)' returned '" + match + "'");
@@ -207,7 +209,7 @@
     autocomplete('#cardQuery', { hint: false, autoselect: true, appendTo: '#cardQueryAutocomplete' }, [
         {
             source: searchCards,
-            displayKey: 'title'
+            displayKey: function(suggestion) { return suggestion.attributes.stripped_title }
         }
     ]);
 })();
