@@ -8,20 +8,26 @@ To install the necessary tools on Windows 10:
 1. Install nvm for windows here: https://dev.to/skaytech/how-to-install-node-version-manager-nvm-for-windows-10-4nbi
 2. nvm install 18.15.0
 
-install jq (linux = apt-get install jq)
+install jq (linux = apt-get install jq, others install here: https://jqlang.github.io/jq/
+-- On windows I've found this easiest to install using Chocolatey which is a package manager. Once you install Chocolatey - I used
 
 1. git clone https://github.com/nodecg/nodecg.git nodecg
-2. cd nodecg
-3. npm install && npm run build
-4. cd bundles
-5. git clone https://github.com/eheiden/nodecg-netrunnerdb-cards
-6. cd nodecg-netrunnerdb-cards
-7. npm install
-8. cd shared/netrunnercards/
-9. ./card_download.sh
-10. cd ../../..
-11. nvm use 18.15.0
-8. nodecg start
+2. cd nodecg/bundles
+3. git clone https://github.com/eheiden/nodecg-netrunnerdb-cards
+4. cd nodecg-netrunnerdb-cards
+5. npm install
+6. cd shared/netrunnercards/
+7. ./card_download.sh (on windows admin may be required on the terminal session for the script to have the right file access)
+8. cd ../../../.. (back to base nodecg directory)
+9. nvm use 18.15.0
+10. npm install && npm run build
+11. nodecg start (or alternatively "node index.js")
+12. Open a browser and visit http://localhost:9090/dashboard/#
+13. On the right click on Graphics (eyeball icon)
+14. Copy Url for Card-display.html (or solo-card.html, or both)
+15. In OBS click under sources, add a browser source, paste the URL under URL, set the width to 1920x1080 for the card-display.html (or 400x577 for solo-card.html), click Use custom frame rate and set it to 60.
+16. Now you should be able to type a card name in and hit enter to see it.
+17. hit show left / show right / etc to display the card on the OBS overlay.
 
 The nodecg-netrunnerdb-cards bundle requires cards to be in `shared/netrunnercards/` named as `<nrdbcode>.jpg`. For example, Maw would be in that folder as `12002.jpg`.
 

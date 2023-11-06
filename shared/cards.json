@@ -12341,36 +12341,6 @@
       }
     },
     {
-      "id": "14001",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14001"
-      },
-      "attributes": {
-        "stripped_title": "Evidence Collection 2"
-      }
-    },
-    {
-      "id": "14002",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14002"
-      },
-      "attributes": {
-        "stripped_title": "Evidence Collection 3"
-      }
-    },
-    {
-      "id": "14003",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14003"
-      },
-      "attributes": {
-        "stripped_title": "Evidence Collection 4"
-      }
-    },
-    {
       "id": "14004",
       "type": "printings",
       "links": {
@@ -12381,16 +12351,6 @@
       }
     },
     {
-      "id": "14005",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14005"
-      },
-      "attributes": {
-        "stripped_title": "Investigator Inez Delgado A 2"
-      }
-    },
-    {
       "id": "14006",
       "type": "printings",
       "links": {
@@ -12398,16 +12358,6 @@
       },
       "attributes": {
         "stripped_title": "Lt. Todachine"
-      }
-    },
-    {
-      "id": "14007",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14007"
-      },
-      "attributes": {
-        "stripped_title": "Lt. Todachine 2"
       }
     },
     {
@@ -12441,16 +12391,6 @@
       }
     },
     {
-      "id": "14011",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14011"
-      },
-      "attributes": {
-        "stripped_title": "Machicolation B"
-      }
-    },
-    {
       "id": "14012",
       "type": "printings",
       "links": {
@@ -12458,16 +12398,6 @@
       },
       "attributes": {
         "stripped_title": "Corporate Oversight"
-      }
-    },
-    {
-      "id": "14013",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14013"
-      },
-      "attributes": {
-        "stripped_title": "Corporate Oversight B"
       }
     },
     {
@@ -12481,36 +12411,6 @@
       }
     },
     {
-      "id": "14015",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14015"
-      },
-      "attributes": {
-        "stripped_title": "Investigator Inez Delgado 2"
-      }
-    },
-    {
-      "id": "14016",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14016"
-      },
-      "attributes": {
-        "stripped_title": "Investigator Inez Delgado 3"
-      }
-    },
-    {
-      "id": "14017",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14017"
-      },
-      "attributes": {
-        "stripped_title": "Investigator Inez Delgado 4"
-      }
-    },
-    {
       "id": "14018",
       "type": "printings",
       "links": {
@@ -12521,16 +12421,6 @@
       }
     },
     {
-      "id": "14019",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14019"
-      },
-      "attributes": {
-        "stripped_title": "Surveillance Network Key 2"
-      }
-    },
-    {
       "id": "14020",
       "type": "printings",
       "links": {
@@ -12538,16 +12428,6 @@
       },
       "attributes": {
         "stripped_title": "BMI Buffer"
-      }
-    },
-    {
-      "id": "14021",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14021"
-      },
-      "attributes": {
-        "stripped_title": "BMI Buffer 2"
       }
     },
     {
@@ -12581,16 +12461,6 @@
       }
     },
     {
-      "id": "14025",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14025"
-      },
-      "attributes": {
-        "stripped_title": "The Masque B"
-      }
-    },
-    {
       "id": "14026",
       "type": "printings",
       "links": {
@@ -12598,16 +12468,6 @@
       },
       "attributes": {
         "stripped_title": "Sneakdoor Prime"
-      }
-    },
-    {
-      "id": "14027",
-      "type": "printings",
-      "links": {
-        "self": "https://api-preview.netrunnerdb.com/api/v3/public/printings/14027"
-      },
-      "attributes": {
-        "stripped_title": "Sneakdoor Prime B"
       }
     },
     {
