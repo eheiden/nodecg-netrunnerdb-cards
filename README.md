@@ -8,6 +8,7 @@ To install the necessary tools on Windows 10/11:
 1. Install git: https://git-scm.com/downloads/win
 2. Install nvm for windows here: https://dev.to/skaytech/how-to-install-node-version-manager-nvm-for-windows-10-4nbi
 3. nvm install 18.15.0
+4. Install node.js - https://nodejs.org/en/download/ (using the windows installer .msi)
 
 install jq (linux = apt-get install jq, others install here: https://jqlang.github.io/jq/
 -- On windows I've found this easiest to install using Chocolatey which is a package manager. Once you install Chocolatey - I used
