@@ -21,7 +21,7 @@
     "nodecg-bundle"
   ],
   "nodecg": {
-    "compatibleRange": "~2.1.1",
+    "compatibleRange": "~2.6.1",
     "dashboardPanels": [
       {
         "name": "card-overlay",
