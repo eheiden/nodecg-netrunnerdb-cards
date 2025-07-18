@@ -4,9 +4,10 @@ It was originally written by [dodgepong](https://github.com/dodgepong/nodecg-net
 It works with NodeCG versions which satisfy this [semver](https://docs.npmjs.com/getting-started/semantic-versioning) range: `~2.1.1`
 You will need to have an appropriate version of NodeCG installed to use it.
 NodeCG requires Node.js version 18.15.0. In order to use old versions of Node.js (such as this one), use nvm.
-To install the necessary tools on Windows 10:
-1. Install nvm for windows here: https://dev.to/skaytech/how-to-install-node-version-manager-nvm-for-windows-10-4nbi
-2. nvm install 18.15.0
+To install the necessary tools on Windows 10/11:
+1. Install git: https://git-scm.com/downloads/win
+2. Install nvm for windows here: https://dev.to/skaytech/how-to-install-node-version-manager-nvm-for-windows-10-4nbi
+3. nvm install 18.15.0
 
 install jq (linux = apt-get install jq, others install here: https://jqlang.github.io/jq/
 -- On windows I've found this easiest to install using Chocolatey which is a package manager. Once you install Chocolatey - I used
